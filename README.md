@@ -1,3 +1,41 @@
+### Google BBR Network Acceleration Script
+
+**Introduction**  
+This script automates the installation and configuration of Google's BBR (Bottleneck Bandwidth and RTT) congestion control algorithm and its variants...
+
+**Notes**  
+- **BBR3**: An experimental version that may be unstable.  
+- **Modified BBR (Lotserver)**: Requires compiling kernel modules, which may take longer.  
+- **Internet Connection**: The script downloads necessary packages during installation.  
+- **Kernel Upgrade**: If your kernel version is too low, the script will prompt you to upgrade and reboot.  
+- **Production Environments**: Back up critical data before installation.  
+- **Cloud Provider Restrictions**: Some cloud providers (e.g., AWS, Google Cloud) may restrict or modify kernel behavior, preventing BBR from working. Check provider documentation first.  
+- **Firewall Configuration**: Adjust firewall rules to allow BBR-related traffic after enabling.  
+- **Performance Monitoring**: Use tools like `ss -i` or `netstat -s` to verify BBR is functioning properly.  
+- **Compatibility Issues**: Some applications or services may conflict with BBR. Switch back to TCP Cubic if connectivity issues arise.  
+- **IPv6 Support**: IPv6 is enabled by default, but additional configuration may be required in certain environments.  
+
+**Technical Support**  
+For questions or suggestions, contact the script author or submit an issue to the project repository.  
+
+**Additional Notes**  
+- **Configuration Backup**: The original `sysctl.conf` is automatically backed up as `sysctl.conf.bak` for restoration.  
+- **Logging**: Detailed installation output is displayed in the terminal and can be redirected to a log file.  
+- **Kernel Modules**: BBR2 and BBR3 may require manual kernel module loading depending on system configuration.  
+- **HTTP/2 Support**: The script attempts to enable HTTP/2 for Nginx, requiring valid SSL certificates.  
+- **Regular Updates**: Keep the script updated for new features and bug fixes.  
+
+ 
+
+Let me know if you need further refinements!
+
+
+
+
+
+
+
+
 # Google BBR 网络加速脚本
 
 ## 简介
